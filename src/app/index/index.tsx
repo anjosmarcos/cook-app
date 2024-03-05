@@ -63,11 +63,14 @@ export default function Index() {
 
             </ScrollView>
                 
-            <Selected
+            { 
+            selected.length > 0 && (
+                <Selected
                 quantity={selected.length}
                 onClear={handleClearSelected}
                 onSearch={() => {}}
             />
+            )}
 
         </View>
     )

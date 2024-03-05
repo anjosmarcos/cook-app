@@ -11,7 +11,11 @@ type Props ={
 }
 export function Selected({ quantity, onClear, onSearch }: Props){
     return (
-        <Animated.View style={styles.container}>
+        <Animated.View 
+            entering={SlideInDown.duration(500)}
+            exiting={BounceOutDown}
+            style={styles.container}
+            >
             <View style={styles.header}>
                 <Text style={styles.label}>
                     {quantity} ingredients selecionados
