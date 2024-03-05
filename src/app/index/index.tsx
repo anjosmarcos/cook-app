@@ -2,8 +2,18 @@ import { ScrollView, Text, View } from "react-native";
 
 import { styles } from "./styles";
 import { Ingredient } from "@/components/Ingredient";
+import { useState } from "react";
 
 export default function Index() {
+    const [selected, setSelected] = useState<string[]>([])
+
+    function handleToggleSelected(value: string){
+        if(selected.includes(value)){
+            return setSelected((state) => state.filter((item) => item !== value))
+        }
+        setSelected((state) => [...state, value])
+    }
+
     return (
         <View style={styles.container} >
             <Text style={styles.title}>
@@ -22,7 +32,13 @@ export default function Index() {
             >
                 {
                     Array.from({ length: 100 }).map((item, index) => (
-                        <Ingredient key={index} />
+                        <Ingredient 
+                            key={index} 
+                            name="Maca"
+                            image=""
+                            selected={selected.includes(String(index))}
+                            onPress={() => handleToggleSelected(String(index))}
+                        />
                     ))
                 }
 
