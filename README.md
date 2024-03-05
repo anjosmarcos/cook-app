@@ -45,13 +45,6 @@ Imagine chegar em casa com fome depois de um dia de muito trabalho e lembrar que
 1. Abra o aplicativo Expo em seu dispositivo móvel ou em um emulador.
 2. Explore as diversas receitas disponíveis com base nos ingredientes que você possui.
 
-## Tecnologias Utilizadas
-
-- React Native
-- Expo
-- Expo Router
-- Supabase
-- React Native Reanimated
 
 ## Licença
 
