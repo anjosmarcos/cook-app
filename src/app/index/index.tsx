@@ -1,8 +1,7 @@
-import { Text, View } from "react-native";
-
-import { Ingredient } from "@/components/Ingredients";
+import { ScrollView, Text, View } from "react-native";
 
 import { styles } from "./styles";
+import { Ingredient } from "@/components/Ingredient";
 
 export default function Index() {
     return (
@@ -17,7 +16,18 @@ export default function Index() {
                 Descubra receitas baseadas que você escolheu.
             </Text>
 
-            <Ingredient />
+            <ScrollView
+                contentContainerStyle={styles.igredients}
+                showsHorizontalScrollIndicator={false}
+            >
+                {
+                    Array.from({ length: 100 }).map((item, index) => (
+                        <Ingredient key={index} />
+                    ))
+                }
+
+            </ScrollView>
+
         </View>
     )
 }
