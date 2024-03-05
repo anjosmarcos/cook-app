@@ -20,6 +20,14 @@ Imagine chegar em casa com fome depois de um dia de muito trabalho e lembrar que
 - **Integração com Supabase:** Armazena e recupera dados de receitas utilizando o Supabase como banco de dados.
 - **Animações Suaves:** Utiliza a biblioteca React Native Reanimated para criar animações fluidas e uma experiência de usuário envolvente.
 
+## Tecnologias Utilizadas
+- Expo
+- Google Fonts
+- Animação - React Native Reanimated
+- Banco de Dados - SupaBase
+- TypeScript
+- e muito mais
+
 ## Como Utilizar
 
 ### Instalação do Projeto:
